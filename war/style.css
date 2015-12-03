@@ -1,0 +1,17 @@
+
+.text-panel {
+	padding: 15px;
+}
+
+.x-viewport {
+	background-color: #070;
+}
+
+div.olms-title {
+	background-color: #3f6bbc;
+	color: white;
+	font-size: 15pt;
+	height: 34px;
+	padding-left: 15px;
+	padding-top: 15px;
+}

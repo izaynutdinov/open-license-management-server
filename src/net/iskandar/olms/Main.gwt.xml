@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- When updating your version of GWT, you should also update this DTD reference, 
+	so that your app can take advantage of the latest GWT module capabilities. -->
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 1.6.4//EN" "http://google-web-toolkit.googlecode.com/svn/tags/1.6.4/distro-source/core/src/gwt-module.dtd">
+<module rename-to='olms'>
+
+	<inherits name='com.google.gwt.user.User' />
+  	<inherits name='com.google.gwt.user.theme.clean.CleanResources' />
+  	<inherits name='com.google.gwt.activity.Activity' />
+  	<inherits name='com.google.gwt.place.Place' />
+  	<inherits name='com.codeveo.gwt.stomp.StompClient' />
+
+	<inherits name="com.sencha.gxt.ui.GXT" />
+    <inherits name="com.sencha.gxt.theme.blue.Blue" />
+    <!-- <inherits name="com.sencha.gxt.theme.neptune.Theme" /> -->    
+    
+	<!--<property-provider name="gxt.theme"><![CDATA[
+	    /*if (window.location.pathname.indexOf('blue') != -1 || window.location.search.indexOf('blue') != -1) {
+	      return "blue";
+	    }
+	    if (window.location.pathname.indexOf('gray') != -1 || window.location.search.indexOf('gray') != -1) {
+	      return "gray";
+	    }*/
+	    return "neptune";
+  	]]></property-provider>-->      	
+
+<!--
+	<replace-with class="net.iskandar.for_binadox.chat.client.mvp.ClientFactoryImpl">
+		<when-type-is class="net.iskandar.for_binadox.chat.client.mvp.ClientFactory" />
+	</replace-with>
+
+	<replace-with class="net.iskandar.for_binadox.chat.client.Initializer3Impl">
+		<when-type-is class="net.iskandar.for_binadox.chat.client.Initializer" />	
+	</replace-with> -->
+
+	<stylesheet src="reset.css" />
+
+	<entry-point class='net.iskandar.olms.client.Main' />
+
+</module>
+
