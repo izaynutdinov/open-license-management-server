@@ -18,5 +18,5 @@ public class License extends BaseEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 }
