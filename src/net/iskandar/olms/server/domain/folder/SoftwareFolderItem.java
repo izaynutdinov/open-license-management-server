@@ -1,5 +1,6 @@
 package net.iskandar.olms.server.domain.folder;
 
+import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -11,7 +12,7 @@ import net.iskandar.olms.server.domain.Software;
 @DiscriminatorValue("SOFTWARE")
 public class SoftwareFolderItem extends FolderItem {
 	
-	@ManyToOne(optional=false)
+	@ManyToOne(optional=false, cascade=CascadeType.PERSIST)
 	@JoinColumn(name="SOFTWARE_ID", nullable=false, updatable=false)
 	private Software software;
 

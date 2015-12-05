@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import net.iskandar.olms.server.domain.BaseEntity;
 import net.iskandar.olms.server.service.Service;
 
-public class BaseServiceImpl<T extends BaseEntity> implements Service<T> {
+public class BaseServiceImpl<T> implements Service<T> {
 
 	private Class clazz;
 	private SessionFactory sessionFactory;

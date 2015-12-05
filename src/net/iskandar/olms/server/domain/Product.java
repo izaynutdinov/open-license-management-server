@@ -1,16 +1,32 @@
 package net.iskandar.olms.server.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="PRODUCTS")
-public class Product extends BaseEntity {
+public class Product {
 
-	@ManyToOne(optional=false)
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer id;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+	@ManyToOne(optional=false, cascade=CascadeType.PERSIST)
 	@JoinColumn(name="VENDOR_ID", nullable=false, updatable=false)
 	private Vendor vendor;
 
