@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 4.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/olms</property>
+        <property name="hibernate.connection.username">olms</property>
+        <property name="hibernate.connection.password">qwerty</property>
+
+        <!-- SQL dialect -->
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+
+        <property name="hibernate.connection.pool_size">1</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache  -->
+
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <!-- <property name="hbm2ddl.auto">none</property> -->
+
+        <mapping package="net.iskandar.olms.server.domain" />
+        <mapping package="net.iskandar.olms.server.domain.folder" />
+
+    </session-factory>
+
+</hibernate-configuration>
