@@ -220,9 +220,6 @@
 	</dependencies>
 
 	<build>
-
-		<sourceDirectory>src</sourceDirectory>
-		<testSourceDirectory>test</testSourceDirectory>
 		<plugins>
 
 			<plugin>
@@ -271,7 +268,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.1.1</version>
 				<configuration>
-					<warSourceDirectory>${basedir}/war</warSourceDirectory>
+					<warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
 					<archiveClasses>true</archiveClasses>
 					<warSourceExcludes>WEB-INF/classes/**</warSourceExcludes>
 					<warSourceExcludes>olms/**</warSourceExcludes>
@@ -304,7 +301,7 @@
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<version>2.7</version>
 				<configuration>
-					<buildOutputDirectory>war/WEB-INF/classes/</buildOutputDirectory>
+					<buildOutputDirectory>src/main/webapp/WEB-INF/classes/</buildOutputDirectory>
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>
 					<additionalBuildcommands>
